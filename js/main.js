@@ -1,43 +1,39 @@
 $(document).ready(function () {
-    // Header Scroll
-    $(window).on('scroll', function () {
-        var scroll = $(window).scrollTop();
+    //some logic for slide down food menu
 
-        if (scroll >= 50) {
-            $('#header').addClass('fixed');
-        } else {
-            $('#header').removeClass('fixed');
-        }
-    });
-
-    // contact form
-    $("#contactsform").submit(function () {
-        var a = $(this).attr("action");
-        $("#message").slideUp(750, function () {
-            $("#message").hide();
-            $("#submit-contacts").attr("disabled", "disabled");
-            $.post(a, {
-                name: $("#contacts-form-name").val(),
-                email: $("#contacts-form-email").val(),
-                phone: $("#contacts-form-phone").val(),
-                comments: $("#contacts-form-message").val()
-            }, function (a) {
-                document.getElementById("message").innerHTML = a;
-                $("#message").slideDown("slow");
-                $("#submit-contacts").removeAttr("disabled");
-                if (null != a.match("success")) $("#contactsform").slideDown("slow");
-            });
+    if($(document).width()<992){
+        $('.food-inner').on('click', function () {
+            if($('.food-inner-menu').is(':hidden')){
+                $('.food-inner-menu').slideDown();
+            }else{
+                $('.food-inner-menu').slideUp();
+            }
         });
-        return false;
-    });
-    $("#contactsform input, #contactsform textarea").keyup(function () {
-        $("#message").slideUp(1500);
-    });
-
-    //menu scrolling
-    $(".scroll").click(function (event) {
-        event.preventDefault();
-        $('html,body').animate({scrollTop: $(this.hash).offset().top - 64}, 1000);
+        $('.drinks-inner').on('click', function () {
+            if($('.drinks-inner-menu').is(':hidden')){
+                $('.drinks-inner-menu').slideDown();
+            }else{
+                $('.drinks-inner-menu').slideUp();
+            }
+        });
+    }else{
+        $('.food-inner').on('click', function () {
+            if($('.food-inner-menu').is(':hidden')){
+                $('.food-inner-menu').insertBefore('#contacts').slideDown();
+            }else{
+                $('.food-inner-menu').insertBefore('#contacts').slideUp();
+            }
+        });
+        $('.drinks-inner').on('click', function () {
+            if($('.drinks-inner-menu').is(':hidden')){
+                $('.drinks-inner-menu').insertBefore('#contacts').slideDown();
+            }else{
+                $('.drinks-inner-menu').insertBefore('#contacts').slideUp();
+            }
+        });
+    }
+    $('.fa-close').on('click', function () {
+        var parElem=$(this).parent();
+        $(parElem).slideUp();
     });
 });
-
