@@ -114,7 +114,7 @@ h5 {
 
 /* line 10, ../sass/style.sass */
 .overlay {
-  position: absolute;
+  position: fixed;
   width: 100%;
   min-height: 100%;
   height: 100%;
@@ -148,7 +148,7 @@ header .logo-wrapper .logo img {
 }
 
 /* line 35, ../sass/style.sass */
-.food-inner, .drinks-inner, .contacts-address, .contacts-phone, .contacts-mailUs {
+.food-inner, .drinks-inner, .third-inner, .fourth-inner, .contacts-address, .contacts-phone, .contacts-mailUs {
   text-align: center;
   padding-top: 5%;
   padding-bottom: 5%;
