@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
-    $('.overlay').css({'height': $(document).height()+'px'});
+    $(window).on('resize',function(){
+        $('.overlay').css({height: $(window).height()+'px'});
+    });
 
     $('.page').parallax({
         imageSrc: './img/bg1.jpg',
