@@ -4,6 +4,15 @@
 @import "variables"
 @import "typography"
 
+.page
+  min-height: 400px
+  background: transparent
+.overlay
+  position: absolute
+  width: 100%
+  min-height: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .3)
 .fa
   font-size: 2rem
   color: #e84545
@@ -12,7 +21,7 @@
 body
   font-size: 62.5%
   font-family: $font
-  background-color: #444
+  //background-color: #444
 header
   .logo-wrapper
     .logo
@@ -36,7 +45,11 @@ header
     vertical-align: super
 
 footer
-  padding: 2% auto
+  padding: 30px
+  position: relative
+  .footer-copy
+    p
+      color: $base-color
   .footer-logo
     padding: 10px 0
     img
@@ -46,36 +59,58 @@ footer
 
 .food-inner-menu, .drinks-inner-menu
   position: relative
-  //display: none
-  //height: 500px
+  display: none
   width: 100%
-  background-color: yellow
-  .fa-close
+  background-color: #e8e8e8
+  padding-bottom: 50px
+  .close-btn
     position: absolute
     cursor: pointer
-    top: 2%
-    right: 5px
+    bottom: 0
+    left: 50%
     padding: 0
+    text-align: center
+    margin-left: -34px
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
 .no-padding
   padding: 0
-  
-  
+.drinks-inner-menu
+  .inner-menu-group-title
+    h4
+      text-transform: uppercase
+      letter-spacing: -1px
+      width: 100%
+      float: right
 .inner-menu-group-title
-  width: 88%
+  width: 100%
   background-color: rgba(10, 10, 10, .9)
   margin: 0 2% 0 0
   padding: 2% 0 2% 2%
+  height: 100px
   h4
     text-transform: uppercase
     letter-spacing: -1px
+    width: 60%
+    float: right
   span
-    font-size: 1.2rem
+    font-size: 1rem
     letter-spacing: -1px
     color: $brand-color
+  &-image
+    width: 40%
+    float: left
+    margin: 0 auto
 .inner-menu-group-item
   margin: 5% 5%
   padding: 1%
   border: 2px solid black
+  &-dotted
+    border: 2px dotted $brand-color
 
 .inner-menu-item-dish
   padding: 1%
@@ -86,11 +121,12 @@ footer
     font-weight: bold
   .inner-menu-item-dish-title
     display: inline-block
+    width: 84%
   .inner-menu-item-dish-price
     float: right
+    display: inline-block
     h5
       font-weight: normal
-    display: inline-block
   .inner-menu-item-dish-description
     width: 96%
     padding-top: 1%

@@ -107,6 +107,21 @@ h5 {
 }
 
 /* line 7, ../sass/style.sass */
+.page {
+  min-height: 400px;
+  background: transparent;
+}
+
+/* line 10, ../sass/style.sass */
+.overlay {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 16, ../sass/style.sass */
 .fa {
   font-size: 2rem;
   color: #e84545;
@@ -114,26 +129,25 @@ h5 {
   padding-bottom: 2%;
 }
 
-/* line 12, ../sass/style.sass */
+/* line 21, ../sass/style.sass */
 body {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
-  background-color: #444;
 }
 
-/* line 18, ../sass/style.sass */
+/* line 27, ../sass/style.sass */
 header .logo-wrapper .logo {
   width: 160px;
   height: 160px;
   margin: 0 auto;
 }
-/* line 22, ../sass/style.sass */
+/* line 31, ../sass/style.sass */
 header .logo-wrapper .logo img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 26, ../sass/style.sass */
+/* line 35, ../sass/style.sass */
 .food-inner, .drinks-inner, .contacts-address, .contacts-phone, .contacts-mailUs {
   text-align: center;
   padding-top: 5%;
@@ -141,111 +155,150 @@ header .logo-wrapper .logo img {
   cursor: pointer;
 }
 
-/* line 31, ../sass/style.sass */
+/* line 40, ../sass/style.sass */
 .contacts-phone {
   cursor: default;
 }
 
-/* line 33, ../sass/style.sass */
+/* line 42, ../sass/style.sass */
 .contacts-address {
   cursor: default;
 }
-/* line 35, ../sass/style.sass */
+/* line 44, ../sass/style.sass */
 .contacts-address span {
   vertical-align: super;
 }
 
-/* line 38, ../sass/style.sass */
+/* line 47, ../sass/style.sass */
 footer {
-  padding: 2% auto;
+  padding: 30px;
+  position: relative;
 }
-/* line 40, ../sass/style.sass */
+/* line 51, ../sass/style.sass */
+footer .footer-copy p {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* line 53, ../sass/style.sass */
 footer .footer-logo {
   padding: 10px 0;
 }
-/* line 42, ../sass/style.sass */
+/* line 55, ../sass/style.sass */
 footer .footer-logo img {
   width: 80px;
   height: 16px;
   float: right;
 }
 
-/* line 47, ../sass/style.sass */
+/* line 60, ../sass/style.sass */
 .food-inner-menu, .drinks-inner-menu {
   position: relative;
+  display: none;
   width: 100%;
-  background-color: yellow;
+  background-color: #e8e8e8;
+  padding-bottom: 50px;
 }
-/* line 53, ../sass/style.sass */
-.food-inner-menu .fa-close, .drinks-inner-menu .fa-close {
+/* line 66, ../sass/style.sass */
+.food-inner-menu .close-btn, .drinks-inner-menu .close-btn {
   position: absolute;
   cursor: pointer;
-  top: 2%;
-  right: 5px;
+  bottom: 0;
+  left: 50%;
   padding: 0;
+  text-align: center;
+  margin-left: -34px;
+}
+/* line 74, ../sass/style.sass */
+.food-inner-menu:after, .drinks-inner-menu:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
-/* line 59, ../sass/style.sass */
+/* line 80, ../sass/style.sass */
 .no-padding {
   padding: 0;
 }
 
-/* line 63, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
+.drinks-inner-menu .inner-menu-group-title h4 {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  width: 100%;
+  float: right;
+}
+
+/* line 89, ../sass/style.sass */
 .inner-menu-group-title {
-  width: 88%;
+  width: 100%;
   background-color: rgba(10, 10, 10, 0.9);
   margin: 0 2% 0 0;
   padding: 2% 0 2% 2%;
+  height: 100px;
 }
-/* line 68, ../sass/style.sass */
+/* line 95, ../sass/style.sass */
 .inner-menu-group-title h4 {
   text-transform: uppercase;
   letter-spacing: -1px;
+  width: 60%;
+  float: right;
 }
-/* line 71, ../sass/style.sass */
+/* line 100, ../sass/style.sass */
 .inner-menu-group-title span {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: -1px;
   color: #f05a1d;
 }
+/* line 104, ../sass/style.sass */
+.inner-menu-group-title-image {
+  width: 40%;
+  float: left;
+  margin: 0 auto;
+}
 
-/* line 75, ../sass/style.sass */
+/* line 108, ../sass/style.sass */
 .inner-menu-group-item {
   margin: 5% 5%;
   padding: 1%;
   border: 2px solid black;
 }
+/* line 112, ../sass/style.sass */
+.inner-menu-group-item-dotted {
+  border: 2px dotted #f05a1d;
+}
 
-/* line 80, ../sass/style.sass */
+/* line 115, ../sass/style.sass */
 .inner-menu-item-dish {
   padding: 1%;
 }
-/* line 82, ../sass/style.sass */
+/* line 117, ../sass/style.sass */
 .inner-menu-item-dish h5 {
   text-transform: uppercase;
   letter-spacing: -1px;
   font-size: 1.1rem;
   font-weight: bold;
 }
-/* line 87, ../sass/style.sass */
+/* line 122, ../sass/style.sass */
 .inner-menu-item-dish .inner-menu-item-dish-title {
   display: inline-block;
+  width: 84%;
 }
-/* line 89, ../sass/style.sass */
+/* line 125, ../sass/style.sass */
 .inner-menu-item-dish .inner-menu-item-dish-price {
   float: right;
   display: inline-block;
 }
-/* line 91, ../sass/style.sass */
+/* line 128, ../sass/style.sass */
 .inner-menu-item-dish .inner-menu-item-dish-price h5 {
   font-weight: normal;
 }
-/* line 94, ../sass/style.sass */
+/* line 130, ../sass/style.sass */
 .inner-menu-item-dish .inner-menu-item-dish-description {
   width: 96%;
   padding-top: 1%;
 }
-/* line 97, ../sass/style.sass */
+/* line 133, ../sass/style.sass */
 .inner-menu-item-dish .inner-menu-item-dish-description p {
   letter-spacing: -1px;
 }
@@ -262,12 +315,6 @@ footer .footer-logo img {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   /* */
-  /* line 16, ../sass/_media.sass */
-  body {
-    background-image: url("../img/bg1.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -289,16 +336,149 @@ footer .footer-logo img {
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   /* */
-  /* line 48, ../sass/_media.sass */
-  body {
-    background-image: url("../img/bg2.jpg");
+  /* line 43, ../sass/_media.sass */
+  header {
+    height: 60vh;
+  }
+  /* line 45, ../sass/_media.sass */
+  header .logo-wrapper {
+    height: 60vh;
+  }
+  /* line 47, ../sass/_media.sass */
+  header .food-inner, header .drinks-inner {
+    height: 30vh;
+  }
+
+  /* line 49, ../sass/_media.sass */
+  #contacts {
+    height: 30vh;
+  }
+  /* line 51, ../sass/_media.sass */
+  #contacts .contacts-address, #contacts .contacts-phone, #contacts .contacts-mailUs {
+    height: 30vh;
+  }
+
+  /* line 54, ../sass/_media.sass */
+  .inner-menu-group {
+    width: 50%;
+    float: left;
+    height: 360px;
+  }
+
+  /* line 58, ../sass/_media.sass */
+  .inner-menu-group-title {
+    width: 96%;
+    background-color: rgba(10, 10, 10, 0.9);
+    margin: 2% 1%;
+    padding: 2% 2% 2% 2%;
+    height: 100px;
+  }
+  /* line 64, ../sass/_media.sass */
+  .inner-menu-group-title h4 {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    width: 60%;
+    float: right;
+  }
+  /* line 69, ../sass/_media.sass */
+  .inner-menu-group-title span {
+    font-size: 1rem;
+    letter-spacing: -1px;
+    color: #f05a1d;
+  }
+  /* line 73, ../sass/_media.sass */
+  .inner-menu-group-title-image {
+    width: 40%;
+    float: left;
+    margin: 0 auto;
+  }
+
+  /* line 77, ../sass/_media.sass */
+  .inner-menu-group-item {
+    width: 96%;
+    margin: 2% 1%;
+    padding: 1%;
+  }
+
+  /* line 82, ../sass/_media.sass */
+  .inner-menu-item-dish {
+    padding: 1%;
+  }
+  /* line 84, ../sass/_media.sass */
+  .inner-menu-item-dish h5 {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  /* line 89, ../sass/_media.sass */
+  .inner-menu-item-dish .inner-menu-item-dish-title {
+    display: inline-block;
+    width: 84%;
+  }
+  /* line 92, ../sass/_media.sass */
+  .inner-menu-item-dish .inner-menu-item-dish-price {
+    float: right;
+    display: inline-block;
+  }
+  /* line 95, ../sass/_media.sass */
+  .inner-menu-item-dish .inner-menu-item-dish-price h5 {
+    font-weight: normal;
+  }
+  /* line 97, ../sass/_media.sass */
+  .inner-menu-item-dish .inner-menu-item-dish-description {
+    width: 96%;
+    padding-top: 1%;
+  }
+  /* line 100, ../sass/_media.sass */
+  .inner-menu-item-dish .inner-menu-item-dish-description p {
+    letter-spacing: -1px;
+  }
+
+  /* line 103, ../sass/_media.sass */
+  header .logo-wrapper {
+    padding-top: 30%;
+  }
+  /* line 105, ../sass/_media.sass */
+  header .logo-wrapper .logo {
+    width: 260px;
+    height: 260px;
+  }
+
+  /* line 108, ../sass/_media.sass */
+  .food-inner, .drinks-inner, .contacts-address, .contacts-phone, .contacts-mailUs {
+    padding-top: 40%;
+  }
+
+  /* line 110, ../sass/_media.sass */
+  footer {
+    height: 10vh;
   }
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
   /* */
+  /* line 117, ../sass/_media.sass */
+  header .logo-wrapper {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  /* line 120, ../sass/_media.sass */
+  header .logo-wrapper .logo {
+    width: 360px;
+    height: 360px;
+  }
+
+  /* line 123, ../sass/_media.sass */
+  .food-inner, .drinks-inner, .contacts-address, .contacts-phone, .contacts-mailUs {
+    padding-top: 20%;
+  }
 }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   /* */
+  /* line 128, ../sass/_media.sass */
+  .inner-menu-group {
+    width: 25%;
+  }
 }

@@ -24,29 +24,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<div class="overlay"></div>
+<div class="page">
 <header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-sm-6">
                 <div class="logo-wrapper">
                     <div class="logo">
                         <img src="img/port-log.png" alt="logo">
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-12 col-sm-6">
                         <div class="food-inner">
                             <i class="fa fa-cutlery"></i>
 
                             <h2>Основное меню</h2>
                         </div>
-                        <div class="food-inner-menu">
-                            <i class="fa fa-close"></i>
-
+                        <div class="food-inner-menu clearfix">
+                            <!--start of menu-group-->
                             <div class="inner-menu-group">
                                 <div class="inner-menu-group-title">
+                                    <div class="inner-menu-group-title-image">
+                                        <img src="img/group-image-chicken.jpg" alt="group-image">
+                                    </div>
                                     <h4>dijon chicken</h4>
                                     <span>медово-горчичная курица</span>
                                 </div>
@@ -77,8 +81,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end of menu-group-->
+
+                            <!--start of menu-group-->
                             <div class="inner-menu-group">
                                 <div class="inner-menu-group-title">
+                                    <div class="inner-menu-group-title-image">
+                                        <img src="img/group-image-porchetta.jpg" alt="group-image">
+                                    </div>
                                     <h4>porchetta</h4>
                                     <span>свинина</span>
                                 </div>
@@ -108,16 +118,92 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--end of menu-group-->
+
+                            <!--start of menu-group-->
+                            <div class="inner-menu-group">
+                                <div class="inner-menu-group-title">
+                                    <div class="inner-menu-group-title-image">
+                                        <img src="img/group-image-pastrami.jpg" alt="group-image">
+                                    </div>
+                                    <h4>pastrami</h4>
+                                    <span>говядина</span>
+                                </div>
+
+                                <div class="inner-menu-group-item">
+                                    <div class="inner-menu-item-dish">
+                                        <div class="inner-menu-item-dish-title">
+                                            <h5>Пастрами</h5>
+                                        </div>
+                                        <div class="inner-menu-item-dish-price"><h5>350</h5></div>
+                                        <div class="inner-menu-item-dish-description">
+                                            <p>мраморная говядина, копченая в смеси ароматных специй, соленые огурцы,
+                                                фирменный горчичный соус, шпинат</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inner-menu-group-item inner-menu-group-item-dotted">
+                                    <div class="inner-menu-item-dish">
+                                        <div class="inner-menu-item-dish-title">
+                                            <h5>лосось</h5>
+                                        </div>
+                                        <div class="inner-menu-item-dish-price"><h5>340</h5></div>
+                                        <div class="inner-menu-item-dish-description">
+                                            <p>филе лосося домашнего копчения, салат айсберг, микс из свежих овощей в
+                                                фирменной заправке из йогурта и мяты</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end of menu-group-->
+
+                            <!--start of menu-group-->
+                            <div class="inner-menu-group">
+                                <div class="inner-menu-group-title">
+                                    <div class="inner-menu-group-title-image">
+                                        <img src="img/group-image-vegetable.jpg" alt="group-image">
+                                    </div>
+                                    <h4>vegetable</h4>
+                                    <span>овощи</span>
+                                </div>
+
+                                <div class="inner-menu-group-item">
+                                    <div class="inner-menu-item-dish">
+                                        <div class="inner-menu-item-dish-title">
+                                            <h5>Капрезе</h5>
+                                        </div>
+                                        <div class="inner-menu-item-dish-price"><h5>290</h5></div>
+                                        <div class="inner-menu-item-dish-description">
+                                            <p>сыр "Моцарелла", свежие помидоры, ромейн, соус "Песто" собственного
+                                                приготовления, бальзамический крем</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inner-menu-group-item">
+                                    <div class="inner-menu-item-dish">
+                                        <div class="inner-menu-item-dish-title">
+                                            <h5>Вегетарианская</h5>
+                                        </div>
+                                        <div class="inner-menu-item-dish-price"><h5>250</h5></div>
+                                        <div class="inner-menu-item-dish-description">
+                                            <p>шпинат, запеченая тыква, коул слоу с яблоком в йогуртовой заправке</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end of menu-group-->
+
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-12 col-sm-6">
                         <div class="drinks-inner">
                             <i class="fa fa-glass"></i>
 
                             <h2>Винная карта</h2>
                         </div>
-                        <div class="drinks-inner-menu">
-                            <i class="fa fa-close"></i>
+                        <div class="drinks-inner-menu clearfix">
 
                             <div class="inner-menu-group">
                                 <div class="inner-menu-group-title">
@@ -127,7 +213,7 @@
                                 <div class="inner-menu-group-item">
                                     <div class="inner-menu-item-dish">
                                         <div class="inner-menu-item-dish-title">
-                                            <h5>классический</h5>
+                                            <h5>Классический</h5>
                                         </div>
                                         <div class="inner-menu-item-dish-price"><h5>150</h5></div>
                                         <div class="inner-menu-item-dish-description">
@@ -136,10 +222,10 @@
                                                 ягоды / Молочный улун</p>
                                         </div>
                                     </div>
-                                    <div class="inner-menu-item-dish">
+                                    <div class="inner-menu-group-item-dish">
                                         <div class="inner-menu-item-dish">
                                             <div class="inner-menu-item-dish-title">
-                                                <h5>фирменный</h5>
+                                                <h5>Фирменный</h5>
                                             </div>
                                             <div class="inner-menu-item-dish-price"><h5>200</h5></div>
                                             <div class="inner-menu-item-dish-description">
@@ -147,10 +233,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="inner-menu-item-dish">
+                                    <div class="inner-menu-group-item-dish">
                                         <div class="inner-menu-item-dish">
                                             <div class="inner-menu-item-dish-title">
-                                                <h5>горячие напитки</h5>
+                                                <h5>Горячие напитки</h5>
                                             </div>
                                             <div class="inner-menu-item-dish-price"><h5>250</h5></div>
                                             <div class="inner-menu-item-dish-description">
@@ -196,14 +282,14 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="hidden-xs col-xs-12 col-md-6">
+                    <div class="hidden-xs col-xs-12 col-sm-6">
                         <div class="drinks-inner">
                             <i class="fa fa-question"></i>
 
                             <h2>3ий раздел на >medium devices</h2>
                         </div>
                     </div>
-                    <div class="hidden-xs col-xs-12 col-md-6">
+                    <div class="hidden-xs col-xs-12 col-sm-6">
                         <div class="drinks-inner">
                             <i class="fa fa-question"></i>
 
@@ -215,22 +301,24 @@
         </div>
     </div>
 </header>
+
 <section id="contacts">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-md-push-4 col-md-4">
+            <div class="col-xs-12 col-sm-push-4 col-sm-4">
                 <div class="contacts-phone">
                     <i class="fa fa-phone"></i>
 
                     <h3>+7 812 123 45 67</h3>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-pull-4 col-md-4">
+            <div class="col-xs-12 col-sm-pull-4 col-sm-4">
                 <div class="contacts-address">
+                    <i class="fa fa-map-marker"></i>
                     <h3>г.Санкт-Петербург, <br>Дворцовая площадь д.1 <br>с 8<span>00</span> до 00<span>00</span></h3>
                 </div>
             </div>
-            <div class="hidden-xs col-xs-12 col-md-4">
+            <div class="hidden-xs col-xs-12 col-sm-4">
                 <div class="contacts-mailUs">
                     <i class="fa fa-envelope-o"></i>
 
@@ -242,47 +330,27 @@
 </section>
 
 <footer>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-6">
+    <div style="display:table; width: 100%">
+        <div style="display:table-row;">
+            <div style="display:table-cell;vertical-align:middle; width: 50%;">
                 <div class="footer-copy">
-                    <p>&copy;2016</p>
+                <p>&copy;2016</p>
                 </div>
             </div>
-            <div class="col-xs-6">
+            <div style="display:table-cell;vertical-align:middle; width: 50%;">
                 <div class="footer-logo">
-                    <img src="img/logogram-01.png" alt="">
+                <img src="img/logogram-01.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 </footer>
-
-<!--<section id="menu-food">-->
-<!--<div class="container-fluid">-->
-<!--<div class="row">-->
-<!--<div class="col-xs-12 col-md-3">-->
-
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-
-<!--<section id="menu-drinks">-->
-<!--<div class="container-fluid">-->
-<!--<div class="row">-->
-<!--<div class="col-xs-12 col-md-3">-->
-
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-
-
+</div>
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="libs/jQuery/jquery-2.1.4.min.js"><\/script>')</script>
+<script src="libs/parallax.js-1.4.2/parallax.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
